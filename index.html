@@ -1,244 +1,320 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sneakers Store - Tênis de alta qualidade com as melhores marcas">
+    <meta name="keywords" content="tênis, sneakers, calçados, nike, jordan, air force">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Sneackers Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Sneakers Store - Tênis Premium</title>
 </head>
 
 <body>
-    <nav id="nav">
-        <div class="navTop">
-            <div class="navItem">
-                <img src="./img/sneakers.png" alt="">
-            </div>
-            <div class="navItem">
-                <div class="search">
-                    <input type="text" placeholder="Buscar..." class="searchInput">
-                    <img src="./img/search.png" width="20" height="20" alt="" class="searchIcon">
+    <header>
+        <nav class="navbar" id="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-top">
+                <div class="nav-item nav-logo">
+                    <img src="./img/sneakers.png" alt="Sneakers Store Logo" class="logo">
+                </div>
+                <div class="nav-item search-container">
+                    <form class="search" role="search" aria-label="Buscar produtos">
+                        <input type="search" placeholder="Buscar produtos..." class="search-input" aria-label="Campo de busca">
+                        <button type="submit" class="search-button" aria-label="Buscar">
+                            <img src="./img/search.png" width="20" height="20" alt="" class="search-icon">
+                        </button>
+                    </form>
+                </div>
+                <div class="nav-item">
+                    <span class="limited-offer">OFERTAS LIMITADAS!</span>
                 </div>
             </div>
-            <div class="navItem">
-                <span class="limitedOffer">OFERTAS LIMITADAS!</span>
+            <div class="nav-bottom">
+                <button class="menu-item" data-index="0">AIR FORCE</button>
+                <button class="menu-item" data-index="1">JORDAN</button>
+                <button class="menu-item" data-index="2">BLAZER</button>
+                <button class="menu-item" data-index="3">CRATER</button>
+                <button class="menu-item" data-index="4">HIPPIE</button>
             </div>
-        </div>
-        <div class="navBottom">
-            <h3 class="menuItem">AIR FORCE</h3>
-            <h3 class="menuItem">JORDAN</h3>
-            <h3 class="menuItem">BLAZER</h3>
-            <h3 class="menuItem">CRATER</h3>
-            <h3 class="menuItem">HIPPIE</h3>
-        </div>
-    </nav>
-    <div class="slider">
-        <div class="sliderWrapper">
-            <div class="sliderItem">
-                <img src="./img/air.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">AIR FORCE</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">R$899</h2>
-                <a href="#product">
-                    <button class="buyButton">COMPRAR!</button>
-                </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-slider" aria-label="Produtos em destaque">
+            <div class="slider-wrapper">
+                <div class="slider-item" data-bg-color="#369e62">
+                    <img src="./img/air.png" alt="Tênis Air Force" class="slider-img">
+                    <div class="slider-bg"></div>
+                    <h1 class="slider-title">AIR FORCE<br>NOVA<br>COLEÇÃO</h1>
+                    <span class="slider-price">R$ 899</span>
+                    <button class="cta-button" onclick="scrollToProduct()">COMPRAR AGORA</button>
+                </div>
+                <div class="slider-item" data-bg-color="rebeccapurple">
+                    <img src="./img/jordan.png" alt="Tênis Air Jordan" class="slider-img">
+                    <div class="slider-bg"></div>
+                    <h1 class="slider-title">AIR JORDAN<br>NOVA<br>COLEÇÃO</h1>
+                    <span class="slider-price">R$ 1.199</span>
+                    <button class="cta-button" onclick="scrollToProduct()">COMPRAR AGORA</button>
+                </div>
+                <div class="slider-item" data-bg-color="teal">
+                    <img src="./img/blazer.png" alt="Tênis Blazer" class="slider-img">
+                    <div class="slider-bg"></div>
+                    <h1 class="slider-title">BLAZER<br>NOVA<br>COLEÇÃO</h1>
+                    <span class="slider-price">R$ 549</span>
+                    <button class="cta-button" onclick="scrollToProduct()">COMPRAR AGORA</button>
+                </div>
+                <div class="slider-item" data-bg-color="cornflowerblue">
+                    <img src="./img/crater.png" alt="Tênis Crater" class="slider-img">
+                    <div class="slider-bg"></div>
+                    <h1 class="slider-title">CRATER<br>NOVA<br>COLEÇÃO</h1>
+                    <span class="slider-price">R$ 549</span>
+                    <button class="cta-button" onclick="scrollToProduct()">COMPRAR AGORA</button>
+                </div>
+                <div class="slider-item" data-bg-color="rgb(124, 115, 80)">
+                    <img src="./img/hippie.png" alt="Tênis Hippie" class="slider-img">
+                    <div class="slider-bg"></div>
+                    <h1 class="slider-title">HIPPIE<br>NOVA<br>COLEÇÃO</h1>
+                    <span class="slider-price">R$ 799</span>
+                    <button class="cta-button" onclick="scrollToProduct()">COMPRAR AGORA</button>
+                </div>
             </div>
-            <div class="sliderItem">
-                <img src="./img/jordan.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">AIR JORDAN</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">R$1199</h2>
-                <a href="#product">
-                    <button class="buyButton">COMPRAR!</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/blazer.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">BLAZER</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">R$549</h2>
-                <a href="#product">
-                    <button class="buyButton">COMPRAR!</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/crater.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">CRATER</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">R$549</h2>
-                <a href="#product">
-                    <button class="buyButton">COMPRAR!</button>
-                </a>
-            </div>
-            <div class="sliderItem">
-                <img src="./img/hippie.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
-                <h1 class="sliderTitle">HIPPIE</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">R$799</h2>
-                <a href="#product">
-                    <button class="buyButton">COMPRAR!</button>
-                </a>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="features">
-        <div class="feature">
-            <img src="./img/shipping.png" alt="" class="featureIcon">
-            <span class="featureTitle">FRETE GRÁTIS</span>
-            <span class="featureDesc">Frete grátis para o mundo todo, em todos os pedidos.</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/return.png" alt="">
-            <span class="featureTitle">30 DIAS PARA TROCA</span>
-            <span class="featureDesc">Devolução e reembolso fácil em até 15 dias.</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/gift.png" alt="">
-            <span class="featureTitle">GIFT CARDS</span>
-            <span class="featureDesc">Compre cartões-presente e use códigos de cupom facilmente.</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/contact.png" alt="">
-            <span class="featureTitle">CONTATE-NOS!</span>
-            <span class="featureDesc">Entre em contato via e-mail e sistema de suporte.</span>
-        </div>
-    </div>
+        <section class="features" aria-label="Nossos diferenciais">
+            <div class="feature">
+                <img src="./img/shipping.png" alt="Ícone de frete grátis" class="feature-icon">
+                <h3 class="feature-title">FRETE GRÁTIS</h3>
+                <p class="feature-desc">Frete grátis para todo o Brasil em pedidos acima de R$ 299.</p>
+            </div>
+            <div class="feature">
+                <img src="./img/return.png" alt="Ícone de devolução" class="feature-icon">
+                <h3 class="feature-title">30 DIAS PARA TROCA</h3>
+                <p class="feature-desc">Devolução e reembolso fácil em até 30 dias úteis.</p>
+            </div>
+            <div class="feature">
+                <img src="./img/gift.png" alt="Ícone de gift card" class="feature-icon">
+                <h3 class="feature-title">GIFT CARDS</h3>
+                <p class="feature-desc">Cartões-presente e cupons de desconto disponíveis.</p>
+            </div>
+            <div class="feature">
+                <img src="./img/contact.png" alt="Ícone de contato" class="feature-icon">
+                <h3 class="feature-title">ATENDIMENTO 24H</h3>
+                <p class="feature-desc">Suporte especializado via chat, email ou telefone.</p>
+            </div>
+        </section>
 
-    <div class="product" id="product">
-        <img src="./img/air.png" alt="" class="productImg">
-        <div class="productDetails">
-            <h1 class="productTitle">AIR FORCE</h1>
-            <h2 class="productPrice">$899</h2>
-            <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda
-                dolorum
-                doloremque sapiente aliquid aperiam.</p>
-            <div class="colors">
-                <div class="color"></div>
-                <div class="color"></div>
-            </div>
-            <div class="sizes">
-                <div class="size">39</div>
-                <div class="size">40</div>
-                <div class="size">41</div>
-                <div class="size">42</div>
-                <div class="size">43</div>
-            </div>
-            <button class="productButton">COMPRAR!</button>
-        </div>
-        <div class="payment">
-            <h1 class="payTitle">Informações Pessoais</h1>
-            <label>Nome e Sobrenome</label>
-            <input type="text" placeholder="João Pedro Santos" class="payInput">
-            <label>Telefone</label>
-            <input type="text" placeholder="+55 11 98989-7777" class="payInput">
-            <label>Endereço</label>
-            <input type="text" placeholder="Rua 10" class="payInput">
-            <h1 class="payTitle">Dados do Cartão</h1>
-            <div class="cardIcons">
-                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
-                <img src="./img/master.png" alt="" width="40" class="cardIcon">
-            </div>
-            <input type="password" class="payInput" placeholder="Número do cartão">
-            <div class="cardInfo">
-                <input type="text" placeholder="mm" class="payInput sm">
-                <input type="text" placeholder="yyyy" class="payInput sm">
-                <input type="text" placeholder="cvv" class="payInput sm">
-            </div>
-            <button class="payButton">Confirmar!</button>
-            <span class="close">X</span>
-        </div>
-    </div>
-    <div class="gallery">
-        <div class="galleryItem">
-            <h1 class="galleryTitle">Be Yourself!</h1>
-            <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt="" class="galleryImg">
-        </div>
-        <div class="galleryItem">
-            <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt="" class="galleryImg">
-            <h1 class="galleryTitle">Este é o Primeiro Dia Da Sua Nova Vida</h1>
-        </div>
-        <div class="galleryItem">
-            <h1 class="galleryTitle">Just Do it!</h1>
-            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt="" class="galleryImg">
-        </div>
-    </div>
-    <div class="newSeason">
-        <div class="nsItem">
-            <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt="" class="nsImg">
-        </div>
-        <div class="nsItem">
-            <h3 class="nsTitleSm">Novidades de Inverno</h3>
-            <h1 class="nsTitle">Nova Sessão</h1>
-            <h1 class="nsTitle">Nova Coleção</h1>
-            <a href="#nav">
-                <button class="nsButton">ESCOLHA SEU ESTILO!</button>
-            </a>
-        </div>
-        <div class="nsItem">
-            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt="" class="nsImg">
-        </div>
-    </div>
-    <footer>
-        <div class="footerLeft">
-            <div class="footerMenu">
-                <h1 class="fMenuTitle">Sobre nós</h1>
-                <ul class="fList">
-                    <li class="fListItem">Empresa</li>
-                    <li class="fListItem">Contato</li>
-                    <li class="fListItem">Carreira</li>
-                    <li class="fListItem">Afilhados</li>
-                    <li class="fListItem">Lojas</li>
-                </ul>
-            </div>
-            <div class="footerMenu">
-                <h1 class="fMenuTitle">Links Úteis</h1>
-                <ul class="fList">
-                    <li class="fListItem">Suporte</li>
-                    <li class="fListItem">Reembolso</li>
-                    <li class="fListItem">FAQ</li>
-                    <li class="fListItem">Feedback</li>
-                    <li class="fListItem">Stories</li>
-                </ul>
-            </div>
-            <div class="footerMenu">
-                <h1 class="fMenuTitle">Produtos</h1>
-                <ul class="fList">
-                    <li class="fListItem">Air Force</li>
-                    <li class="fListItem">Air Jordan</li>
-                    <li class="fListItem">Blazer</li>
-                    <li class="fListItem">Crater</li>
-                    <li class="fListItem">Hippie</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footerRight">
-            <div class="footerRightMenu">
-                <h1 class="fMenuTitle">Inscreva-se para receber ofertas!</h1>
-                <div class="fMail">
-                    <input type="text" placeholder="seu@email.com" class="fInput">
-                    <button class="fButton">inscrever-se!</button>
+        <section class="product-showcase" id="product" aria-label="Produto em destaque">
+            <div class="product-container">
+                <div class="product-image-container">
+                    <img src="./img/air.png" alt="Produto selecionado" class="product-img">
+                </div>
+                <div class="product-details">
+                    <h2 class="product-title">AIR FORCE</h2>
+                    <span class="product-price">R$ 899</span>
+                    <p class="product-desc">Tênis clássico com design atemporal e máximo conforto para uso diário. Feito com materiais premium e tecnologia de ponta.</p>
+                    <div class="product-options">
+                        <div class="color-options">
+                            <label class="options-label">Cores disponíveis:</label>
+                            <div class="color-list">
+                                <button class="color-option active" data-color="0" aria-label="Cor preta"></button>
+                                <button class="color-option" data-color="1" aria-label="Cor azul escuro"></button>
+                            </div>
+                        </div>
+                        <div class="size-options">
+                            <label class="options-label">Tamanhos:</label>
+                            <div class="size-list">
+                                <button class="size-option" data-size="39">39</button>
+                                <button class="size-option" data-size="40">40</button>
+                                <button class="size-option" data-size="41">41</button>
+                                <button class="size-option" data-size="42">42</button>
+                                <button class="size-option" data-size="43">43</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="product-buy-btn">ADICIONAR AO CARRINHO</button>
                 </div>
             </div>
-            <div class="footerRightMenu">
-                <h1 class="fMenuTitle">Siga a Loja</h1>
-                <div class="fIcons">
-                    <img src="./img/facebook.png" alt="" class="fIcon">
-                    <img src="./img/twitter.png" alt="" class="fIcon">
-                    <img src="./img/instagram.png" alt="" class="fIcon">
-                    <img src="./img/whatsapp.png" alt="" class="fIcon">
+        </section>
+            <!-- Modal de Pagamento -->
+            <div class="payment-modal" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Fechar modal">&times;</button>
+                    <h2 id="payment-title" class="modal-title">Finalizar Compra</h2>
+                    
+                    <form class="payment-form">
+                        <fieldset class="form-section">
+                            <legend class="section-title">Informações Pessoais</legend>
+                            <div class="input-group">
+                                <label for="fullName">Nome completo</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="João Pedro Santos" class="form-input" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+55 11 98989-7777" class="form-input" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="address">Endereço</label>
+                                <input type="text" id="address" name="address" placeholder="Rua das Flores, 123" class="form-input" required>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset class="form-section">
+                            <legend class="section-title">Dados do Cartão</legend>
+                            <div class="card-icons">
+                                <img src="./img/visa.png" alt="Visa" class="card-icon">
+                                <img src="./img/master.png" alt="Mastercard" class="card-icon">
+                            </div>
+                            <div class="input-group">
+                                <label for="cardNumber">Número do cartão</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="**** **** **** ****" class="form-input" required>
+                            </div>
+                            <div class="card-info">
+                                <div class="input-group">
+                                    <label for="expMonth">Mês</label>
+                                    <input type="text" id="expMonth" name="expMonth" placeholder="MM" class="form-input small" maxlength="2" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="expYear">Ano</label>
+                                    <input type="text" id="expYear" name="expYear" placeholder="AAAA" class="form-input small" maxlength="4" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" class="form-input small" maxlength="3" required>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <button type="submit" class="confirm-payment-btn">CONFIRMAR COMPRA</button>
+                    </form>
                 </div>
             </div>
-            <div class="footerRightMenu">
-                <span class="copyright">@Developed by Fábio Leon 2023.</span>
+        </section>
+        <!-- Galeria de Imagens Full Width -->
+        <section class="full-gallery">
+            <div class="gallery-image-item">
+                <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Seja Autêntico" class="full-gallery-img">
+                <div class="gallery-overlay">
+                    <h2 class="gallery-text">Seja Autêntico!</h2>
+                </div>
+            </div>
+            <div class="gallery-image-item">
+                <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Primeira Jornada" class="full-gallery-img">
+                <div class="gallery-overlay">
+                    <h2 class="gallery-text">Este é o Primeiro Dia da Sua Nova Jornada</h2>
+                </div>
+            </div>
+            <div class="gallery-image-item">
+                <img src="./img/j2.jpg" alt="Apenas Faça" class="full-gallery-img">
+                <div class="gallery-overlay">
+                    <h2 class="gallery-text">Apenas Faça!</h2>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Carrossel Infinito de Novidades -->
+        <div class="infinite-carousel">
+            <div class="carousel-track">
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+                <span class="carousel-text">NOVIDADES</span>
+            </div>
+        </div>
+        
+        <section class="new-season" aria-label="Nova coleção">
+            <div class="season-item">
+                <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    alt="Nova coleção de inverno" class="season-img" loading="lazy">
+            </div>
+            <div class="season-content">
+                <h3 class="season-subtitle">Novidades de Inverno</h3>
+                <h2 class="season-title">Nova Coleção</h2>
+                <h2 class="season-title">Chegou!</h2>
+                <button class="season-cta" onclick="scrollToTop()">EXPLORE AGORA</button>
+            </div>
+            <div class="season-item">
+                <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    alt="Tênis da nova coleção" class="season-img" loading="lazy">
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <nav class="footer-nav">
+                    <h3 class="footer-title">Sobre Nós</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Nossa História</a></li>
+                        <li><a href="#" class="footer-link">Contato</a></li>
+                        <li><a href="#" class="footer-link">Trabalhe Conosco</a></li>
+                        <li><a href="#" class="footer-link">Programa de Afiliados</a></li>
+                        <li><a href="#" class="footer-link">Nossas Lojas</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <nav class="footer-nav">
+                    <h3 class="footer-title">Atendimento</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Central de Ajuda</a></li>
+                        <li><a href="#" class="footer-link">Trocas e Devoluções</a></li>
+                        <li><a href="#" class="footer-link">Perguntas Frequentes</a></li>
+                        <li><a href="#" class="footer-link">Fale Conosco</a></li>
+                        <li><a href="#" class="footer-link">Status do Pedido</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <nav class="footer-nav">
+                    <h3 class="footer-title">Produtos</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Air Force</a></li>
+                        <li><a href="#" class="footer-link">Air Jordan</a></li>
+                        <li><a href="#" class="footer-link">Blazer</a></li>
+                        <li><a href="#" class="footer-link">Crater</a></li>
+                        <li><a href="#" class="footer-link">Hippie</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <div class="newsletter">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="newsletter-desc">Receba ofertas exclusivas e novidades!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="seu@email.com" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn">INSCREVER</button>
+                    </form>
+                </div>
+                <div class="social-media">
+                    <h3 class="footer-title">Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <img src="./img/facebook.png" alt="Facebook" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <img src="./img/instagram.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <img src="./img/twitter.png" alt="Twitter" class="social-icon">
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <img src="./img/whatsapp.png" alt="WhatsApp" class="social-icon">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    
+    <!-- COPYRIGHT SEPARADO COMPLETAMENTE -->
+    <div class="footer-copyright-section">
+        <p class="copyright-text">&copy; 2024 Sneakers Store. Desenvolvido por Fábio Leon.</p>
+    </div>
     <script src="./js/app.js"></script>
 </body>
 
